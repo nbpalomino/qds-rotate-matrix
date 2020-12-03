@@ -1,0 +1,28 @@
+plugins {
+    id 'application'
+}
+
+application {
+    mainClass = 'qds.Application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+dependencies {
+    implementation "joda-time:joda-time:2.2"
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    archiveBaseName = 'qds-java-array'
+    archiveVersion = '0.1.0'
+}
